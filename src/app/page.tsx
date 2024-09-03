@@ -1,6 +1,21 @@
-import Footer from "@/components/Footer";
+"use client";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Page() {
+  const [username, setUsername] = useState<String>("");
+  const router = useRouter();
+  function handleInput(e: any) {
+    setUsername(e.target.value);
+  }
+
+  function handleSignUp() {
+    if (username.length > 0) {
+      const user = username.split("@")[0];
+      router.push(`/profile/${user}`);
+    }
+  }
+
   return (
     <div className="flex relative justify-between">
       <div className="pt-24 px-16 w-[40%] h-screen flex flex-col items-start justify-start">
@@ -13,26 +28,25 @@ export default function Page() {
         </p>
         <div className="flex flex-col space-y-2 w-full">
           <input
+            onChange={handleInput}
             type="text"
             title="username"
             placeholder="@username"
-            className="py-3 px-6 rounded-xl border border-neutral-400 mr-4 w-full"
+            className="py-4 px-8 rounded-full border border-neutral-400 mr-4 w-full"
           />
           <input
             type="password"
             title="password"
             placeholder="password"
-            className="py-3 px-6 rounded-xl border border-neutral-400 w-full"
+            className="py-4 px-8 rounded-full border border-neutral-400 w-full"
           />
         </div>
-        <div className="flex justify-start items-start space-x-4 mt-4 w-full">
-          <button className="text-lg rounded-full py-3 px-6  border border-neutral-400 w-full">
-            Scan ID Card
-          </button>
-          <button className="text-lg rounded-full py-3 px-6  border border-neutral-400 w-full">
-            SignUp
-          </button>
-        </div>
+        <button
+          onClick={handleSignUp}
+          className="mt-6 text-lg rounded-full py-3 px-6 font-bold border border-neutral-400 w-full"
+        >
+          SignUp
+        </button>
       </div>
       <img
         src="/study.svg"
