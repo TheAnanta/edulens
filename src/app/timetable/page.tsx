@@ -1,3 +1,4 @@
+import Sidebar from '@/components/Sidebar';
 import React from 'react';
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
   ];
 
   return (
-    <div className="p-8">
-      <div className="overflow-hidden rounded-lg shadow-lg">
-        <table className="min-w-full bg-blue-700 text-white">
+    <div className="p-8 flex">
+      <Sidebar />
+      <div className="w-full overflow-hidden rounded-lg shadow-lg mt-24">
+        <table className="w-full bg-blue-700 text-white">
           <thead>
             <tr>
               <th className="head">Subject Code</th>
