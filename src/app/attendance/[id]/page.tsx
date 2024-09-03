@@ -4,6 +4,8 @@ import Sidebar from "@/components/Sidebar";
 // import AvatarImage from "./avatar";
 import { useState } from "react";
 import MarkTable from "./MarkTable";
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 export default function Page(props: { params: { id: string } }) {
   const [attendanceTopDetails, setAttendanceTopDetails] = useState([
@@ -32,6 +34,10 @@ export default function Page(props: { params: { id: string } }) {
             <MarkTable/>
           </div>
       </div>
+      <Stack spacing={2} direction="row">
+      <Button variant="contained">Publish</Button>
+      <Button variant="outlined">Cancel</Button>
+    </Stack>
     </div>
   );
 }
