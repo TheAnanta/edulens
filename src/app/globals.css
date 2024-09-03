@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --main-color: #003c73;       /* Dark Blue */
+  --secondary-color: #D1E9FF;  /* Light Blue */
+  --tertiary: #448CCF;         /* Mid Blue */
+}

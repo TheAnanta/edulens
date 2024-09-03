@@ -9,7 +9,7 @@ export default function Page(props: { params: { id: string } }) {
       <div className="pt-36 px-24 w-full">
         <div className="flex space-x-4">
           <div className="text-2xl font-normal">
-            Welcome Back!{" "}
+            Achievements
             <span className="font-semibold text-3xl uppercase">
               {props.params.id}
             </span>
