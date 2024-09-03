@@ -1,6 +1,6 @@
 import Sidebar from "@/components/Sidebar";
 import AvatarImage from "@/components/AvatarImage";
-import Card from "@/components/Card";
+import AchievementCard from "./AchievementCard";
 
 export default function Page(props: { params: { id: string } }) {
   return (
@@ -17,14 +17,12 @@ export default function Page(props: { params: { id: string } }) {
           <AvatarImage />
         </div>
         <div className="grid grid-cols-3 mt-24 gap-8 w-full">
-          <Card attribute="Name" title="A" key="bi" />
-          <Card attribute="hi there" title="B" key="bi" />
-          <Card attribute="hi there" title="C" key="bi" />
-          <Card attribute="Name" title="A" key="bi" />
-          <Card attribute="hi there" title="B" key="bi" />
-          <Card attribute="hi there" title="C" key="bi" />
-          <Card attribute="Name" title="A" key="bi" />
-          <Card attribute="hi there" title="B" key="bi" />
+          <AchievementCard />
+          <AchievementCard />
+          <AchievementCard />
+          <AchievementCard />
+          <AchievementCard />
+          <AchievementCard />
         </div>
       </div>
     </div>
