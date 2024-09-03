@@ -14,7 +14,8 @@ function App() {
   return (
     <div className="p-8 flex">
       <Sidebar />
-      <div className="w-full overflow-hidden rounded-lg shadow-lg mt-24">
+      <div className="w-full overflow-hidden rounded-lg shadow-lg mt-24 space-y-10">
+      <p className="w-full text-center text-4xl font-bold">TimeTable</p>
         <table className="w-full bg-blue-700 text-white">
           <thead>
             <tr>
