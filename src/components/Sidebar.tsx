@@ -56,18 +56,23 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const menuItems = [
-  { text: "Home", icon: "home" },
-  { text: "Achievements", icon: "emoji_events" },
-  { text: "Attendance", icon: "check_circle" },
-  { text: "Courses", icon: "school" },
-  { text: "Events", icon: "event" },
-  { text: "Placements", icon: "work" },
-  { text: "Profile", icon: "person" },
-  { text: "Research and Publication", icon: "library_books" },
-  { text: "Resource Center", icon: "menu_book" },
-  { text: "Salary", icon: "attach_money" },
-  { text: "Timetable", icon: "schedule" },
-  { text: "Trends", icon: "trending_up" },
+  { text: "Home", icon: "home", link: "/home" },
+  { text: "Profile", icon: "person", link: "/profile" },
+  { text: "Attendance", icon: "check_circle", link: "/attendance" },
+  { text: "Events", icon: "event", link: "/events" },
+  { text: "Course Structure", icon: "school", link: "/courses" },
+  { text: "Timetable", icon: "schedule", link: "/timetable" },
+  {
+    link: "/research-publications",
+    text: "Research & Publication",
+    icon: "library_books",
+  },
+  { text: "Achievements", icon: "emoji_events", link: "/achievements" },
+  { text: "Placements", icon: "work", link: "/placements" },
+  { text: "Resource Center", icon: "menu_book", link: "/resource-center" },
+  { text: "Salary Portal", icon: "attach_money", link: "/salary" },
+  { text: "Feedback | Query", icon: "trending_up", link: "/feedback" },
+  { text: "Trends", icon: "trending_up", link: "/trends" },
 ];
 
 export default function ClippedDrawer() {
@@ -120,9 +125,9 @@ export default function ClippedDrawer() {
         <Toolbar />
         <Box sx={{ overflow: "auto" }}>
           <List>
-            {menuItems.map((item, index) => (
+            {menuItems.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton>
+                <ListItemButton component="a" href={item.link}>
                   <ListItemIcon>
                     <span className="material-symbols-outlined">
                       {item.icon}
