@@ -4,14 +4,45 @@ import Footer from "@/components/Footer";
 
 const eventsData = {
   January: [
-    { eventName: "Shore Fest", location: "Open Audi", date: 10, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor" },
-    { eventName: "Tech Expo", location: "Innovation Hub", date: 15, description: "Discover the latest in technology." },
-    { eventName: "Guest Lecture", location: "Seminar Hall", date: 20, description: "A renowned expert on AI will speak." },
+    {
+      eventName: "Shore Fest",
+      location: "Open Audi",
+      date: 10,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    },
+    {
+      eventName: "Tech Expo",
+      location: "Innovation Hub",
+      date: 15,
+      description: "Discover the latest in technology.",
+    },
+    {
+      eventName: "Guest Lecture",
+      location: "Seminar Hall",
+      date: 20,
+      description: "A renowned expert on AI will speak.",
+    },
   ],
   February: [
-    { eventName: "Coding Challenge", location: "Computer Lab", date: 5, description: "Compete for prizes in a coding competition." },
-    { eventName: "Sports Day", location: "Sports Ground", date: 15, description: "Celebrate with games and activities." },
-    { eventName: "Career Fair", location: "Convention Center", date: 25, description: "Meet potential employers and learn about career options." },
+    {
+      eventName: "Coding Challenge",
+      location: "Computer Lab",
+      date: 5,
+      description: "Compete for prizes in a coding competition.",
+    },
+    {
+      eventName: "Sports Day",
+      location: "Sports Ground",
+      date: 15,
+      description: "Celebrate with games and activities.",
+    },
+    {
+      eventName: "Career Fair",
+      location: "Convention Center",
+      date: 25,
+      description: "Meet potential employers and learn about career options.",
+    },
   ],
 };
 
@@ -21,7 +52,9 @@ export default function Page(props: { params: { id: string } }) {
       <Sidebar />
       <div className="pt-24 px-16 w-full my-6">
         <div>
-          <p className="w-full text-center text-4xl font-bold  ">Event Calender</p>
+          <p className="w-full text-center text-4xl font-bold  ">
+            Event Calender
+          </p>
         </div>
 
         {Object.entries(eventsData).map(([month, events]) => (
@@ -42,8 +75,6 @@ export default function Page(props: { params: { id: string } }) {
             </div>
           </div>
         ))}
-
-        <Footer />
       </div>
     </div>
   );

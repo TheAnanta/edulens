@@ -5,15 +5,15 @@ import Drawer from "@mui/material/Drawer";
 import AppBar from "@mui/material/AppBar";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
+import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
-// import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 
 const drawerWidth = 240;
@@ -56,16 +56,30 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const menuItems = [
+  { text: "Home", icon: "home" },
+  { text: "Achievements", icon: "emoji_events" },
+  { text: "Attendance", icon: "check_circle" },
+  { text: "Courses", icon: "school" },
+  { text: "Events", icon: "event" },
+  { text: "Placements", icon: "work" },
+  { text: "Profile", icon: "person" },
+  { text: "Research and Publication", icon: "library_books" },
+  { text: "Resource Center", icon: "menu_book" },
+  { text: "Salary", icon: "attach_money" },
+  { text: "Timetable", icon: "schedule" },
+  { text: "Trends", icon: "trending_up" },
+];
+
 export default function ClippedDrawer() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
-        sx={{ zIndex: (theme: any) => theme.zIndex.drawer + 1 }}
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
         <Toolbar>
-
           {/* Title */}
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             {"EduLens"}
@@ -107,23 +121,15 @@ export default function ClippedDrawer() {
         <Toolbar />
         <Box sx={{ overflow: "auto" }}>
           <List>
-            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-              <ListItem key={text} disablePadding>
+            {menuItems.map((item, index) => (
+              <ListItem key={item.text} disablePadding>
                 <ListItemButton>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List>
-            {["All mail", "Trash", "Spam"].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  {/* <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon> */}
-                  <ListItemText primary={text} />
+                  <ListItemIcon>
+                    <span className="material-symbols-outlined">
+                      {item.icon}
+                    </span>
+                  </ListItemIcon>
+                  <ListItemText primary={item.text} />
                 </ListItemButton>
               </ListItem>
             ))}

@@ -50,8 +50,6 @@ export default function Page() {
           <img src="/text.svg" alt="" className="h-full" />
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }
