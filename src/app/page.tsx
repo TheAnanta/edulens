@@ -37,7 +37,7 @@ export default function Page() {
       <img
         src="/study.svg"
         alt="study"
-        className="bottom-0 right-[20%] absolute z-50"
+        className="bottom-0 right-[20%] absolute z-50 pointer-events-none"
       />
       <div className="w-[10%]">
         <img src="/gray.svg" alt="study" className="absolute z-10" />
