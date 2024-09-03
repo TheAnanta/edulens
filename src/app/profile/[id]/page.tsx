@@ -27,7 +27,6 @@ export default function Page(props: { params: { id: string } }) {
           <Card attribute="Name" title="A" key="bi" />
           <Card attribute="hi there" title="B" key="bi" />
         </div>
-        <Footer/>
       </div>
     </div>
   );
