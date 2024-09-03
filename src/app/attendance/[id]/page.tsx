@@ -34,12 +34,15 @@ export default function Page(props: { params: { id: string } }) {
         <div className="w-[90%] mx-auto">
           <MarkTable />
         </div>
-        <Stack spacing={2} direction="row" className="w-full justify-center items-center">
+        <Stack
+          spacing={2}
+          direction="row"
+          className="w-full justify-center items-center"
+        >
           <Button variant="contained">Publish</Button>
           <Button variant="outlined">Cancel</Button>
         </Stack>
-        <Footer/>
-      </div>  
+      </div>
     </div>
   );
 }

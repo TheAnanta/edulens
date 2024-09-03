@@ -26,12 +26,13 @@ export default function Page(props: { params: { id: string } }) {
           <AchievementCard />
           <AchievementCard />
         </div>
-        <h2 className="font-semibold my-12 text-3xl">Ratings and Latest News</h2>
+        <h2 className="font-semibold my-12 text-3xl">
+          Ratings and Latest News
+        </h2>
         <div className="flex justify-between my-8 gap-6 ">
           <RatingNews />
           <RatingNews />
         </div>
-        <Footer/>
       </div>
     </div>
   );
