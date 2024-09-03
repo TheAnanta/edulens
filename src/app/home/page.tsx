@@ -1,11 +1,11 @@
+import Footer from "@/components/Footer";
+
 export default function Page() {
   return (
     <div className="flex relative justify-between">
       <div className="pt-24 px-16 w-[40%] h-screen flex flex-col items-start justify-start">
-        <h1 className="uppercase text-lg mb-6">
-          WELCOME TO <span className="font-bold text-2xl">EDULENS</span>
-        </h1>
-        <h2 className="text-xl uppercase mb-6">Get Started</h2>
+        <h1 className="uppercase text-lg mb-2">WELCOME TO EDULENS</h1>
+        <h2 className="text-3xl uppercase mb-4">Get Started</h2>
         <p className="mb-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse amet
           nulla exercitationem vero commodi, deserunt quo molestiae aliquam
@@ -37,20 +37,17 @@ export default function Page() {
       <img
         src="/study.svg"
         alt="study"
-        className="bottom-0 right-[20%] absolute z-50"
+        className="bottom-0 right-[20%] absolute z-50 pointer-events-none"
       />
       <div className="w-[10%]">
         <img src="/gray.svg" alt="study" className="absolute z-10" />
       </div>
 
-      <div className="bg-[var(--main-color)] w-[40%] right-[60%]">
-        <div className="rotate-90 absolute right-40 text-white text-xl gap-x-6">
-          <p className="h-[100vh] max-w-[100vh] uppercase leading-10">
-            humanitaries • computer science engineering • biotechnology •
-            venture development pharmacy • dental • mbbs • artificial
-            intelligence humanitaries • computer science engineering
-            • biotechnology • venture development pharmacy
-          </p>
+      <div className="bg-[var(--main-color)]  w-[40%] right-[60%]">
+        <div className="rotate-90 absolute text-white text-xl gap-x-6">
+          <img src="/text.svg" alt="" className="h-full" />
+          <img src="/text.svg" alt="" className="h-full" />
+          <img src="/text.svg" alt="" className="h-full" />
         </div>
       </div>
     </div>
