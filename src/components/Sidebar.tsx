@@ -65,17 +65,10 @@ export default function ClippedDrawer() {
         sx={{ zIndex: (theme: any) => theme.zIndex.drawer + 1 }}
       >
         <Toolbar>
-          {/* Logo */}
-          <Box
-            component="img"
-            src="/path/to/logo.png"
-            alt="Logo"
-            sx={{ height: 40, marginRight: 2 }}
-          />
 
           {/* Title */}
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            Clipped drawer
+            {"EduLens"}
           </Typography>
 
           {/* Search Bar */}
