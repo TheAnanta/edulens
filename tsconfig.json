@@ -27,6 +27,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/achievements/AchievementCard.tsx"
-  ],
+, "src/app/trends/page.jsx", "src/app/trends/Placement.jsx"  ],
   "exclude": ["node_modules"]
 }
