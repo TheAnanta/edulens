@@ -2,6 +2,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
+import AnalyticsIcon from '@mui/icons-material/Analytics';
 import AppBar from "@mui/material/AppBar";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
@@ -57,6 +58,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const menuItems = [
+
   { text: "Profile", icon: "person", link: "/profile/manas" },
   { text: "Attendance", icon: "check_circle", link: "/attendance/manas" },
   { text: "Events", icon: "event", link: "/events" },
@@ -72,6 +74,7 @@ const menuItems = [
   { text: "Resource Center", icon: "menu_book", link: "/resource-center" },
   { text: "Salary Portal", icon: "attach_money", link: "/salary/manas" },
   { text: "Feedback | Query", icon: "feedback", link: "/feedback" },
+  { text: "Analytics", icon: "analytics", link: "/analytics" },
   { text: "Trends", icon: "trending_up", link: "/trends" },
 ];
 
