@@ -6,7 +6,6 @@ import { useState } from "react";
 import MarkTable from "./MarkTable";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import Footer from "@/components/Footer";
 
 export default function Page(props: { params: { id: string } }) {
   const [attendanceTopDetails, setAttendanceTopDetails] = useState([

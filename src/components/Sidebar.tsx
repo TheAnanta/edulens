@@ -56,8 +56,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const menuItems = [
-  { text: "Home", icon: "home", link: "/home" },
-  { text: "Profile", icon: "person", link: "/profile" },
+  { text: "Home", icon: "home", link: "/" },
+  { text: "Profile", icon: "person", link: "/profile/manas" },
   { text: "Attendance", icon: "check_circle", link: "/attendance" },
   { text: "Events", icon: "event", link: "/events" },
   { text: "Course Structure", icon: "school", link: "/courses" },

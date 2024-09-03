@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer';
 import Sidebar from '@/components/Sidebar';
 import React from 'react';
 
@@ -41,7 +40,6 @@ function App(props: { params: { id: string } }) {
                     </tbody>
                 </table>
             </div>
-            <Footer/>
         </div>
     );
 }

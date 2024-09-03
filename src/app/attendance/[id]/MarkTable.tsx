@@ -58,7 +58,7 @@ export default function CustomizedTables() {
             <StyledTableCell align="left">Reg No</StyledTableCell>
             <StyledTableCell align="left">Attended</StyledTableCell>
             <StyledTableCell align="left">Percentage</StyledTableCell>
-            <StyledTableCell align="left">Present | Absent</StyledTableCell>
+            <StyledTableCell align="center">Present | Absent</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -71,8 +71,8 @@ export default function CustomizedTables() {
               <StyledTableCell align="left">{row.attended}</StyledTableCell>
               <StyledTableCell align="left">{row.percentage}</StyledTableCell>
               <StyledTableCell align="left" className="flex justify-center items-center">
-                <Checkbox defaultChecked />
-                <Checkbox />
+                <Checkbox  defaultChecked />
+                <Checkbox  />
               </StyledTableCell>
             </StyledTableRow>
           ))}
