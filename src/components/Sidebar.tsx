@@ -65,7 +65,6 @@ export default function ClippedDrawer() {
         sx={{ zIndex: (theme: any) => theme.zIndex.drawer + 1 }}
       >
         <Toolbar>
-
           {/* Title */}
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             {"EduLens"}
