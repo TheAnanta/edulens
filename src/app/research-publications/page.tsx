@@ -58,7 +58,7 @@ export default function Page() {
             Research Publications
           </div>
         </div>
-        <div className="grid grid-cols-1 mt-10 mb-16 gap-8 w-full">
+        <div className="grid grid-cols-2 mt-10 mb-16 gap-8 w-full">
           {
             ResearchData.map((item,index) => (
               <PublicationCard attribute={item.attribute} title={item.title} description={item.description} key={index} rating={item.rating} />
