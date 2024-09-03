@@ -1,20 +1,18 @@
 import Sidebar from "@/components/Sidebar";
-import Form from "./Form";
-import ResourceCard from "./ResourceCard";
+import FAQ from "./FAQ";
 
-export default function page() {
+export default function Page() {
   return (
     <div className="flex">
       <Sidebar />
-
       <div className="pt-24 px-16 w-full flex justify-between items-start space-x-4">
         <div className="flex flex-col justify-between items-center space-y-4">
           <div className="flex justify-between items-center space-x-4">
-            <ResourceCard />
-            <ResourceCard />
+            <FAQ />
+            <FAQ />
           </div>
           <div className="p-8 bg-[var(--secondary-color)] rounded-2xl">
-            <h1 className="font-semibold mb-4">University Guidelines</h1>
+            <h1 className="font-bold text-xl mb-4">FAQs</h1>
             <ol className="">
               <li className="mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -37,8 +35,6 @@ export default function page() {
             </ol>
           </div>
         </div>
-
-        <Form />
       </div>
     </div>
   );
