@@ -6,6 +6,7 @@ import { useState } from "react";
 import MarkTable from "./MarkTable";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import Footer from "@/components/Footer";
 
 export default function Page(props: { params: { id: string } }) {
   const [attendanceTopDetails, setAttendanceTopDetails] = useState([
@@ -16,7 +17,7 @@ export default function Page(props: { params: { id: string } }) {
   ]);
 
   return (
-    <div className="flex ">
+    <div className="flex relative">
       <Sidebar />
       <div className="w-full flex-flex-col justify-center items-center space-y-4 mb-10">
         <div className="w-full flex items-center justify-between space-x-8 pt-36 px-24">
@@ -37,6 +38,7 @@ export default function Page(props: { params: { id: string } }) {
           <Button variant="contained">Publish</Button>
           <Button variant="outlined">Cancel</Button>
         </Stack>
+        <Footer/>
       </div>  
     </div>
   );

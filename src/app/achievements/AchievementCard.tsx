@@ -1,6 +1,6 @@
 export default function AchievementCard() {
   return (
-    <div className="flex flex-col p-4 rounded-3xl bg-[var(--secondary-color)] h-fit">
+    <div className="flex flex-col p-4 rounded-2xl bg-[var(--secondary-color)] h-fit">
       <div className="flex justify-between">
         <div className="flex flex-col">
           <p className="font-bold text-2xl mt-1">Neeraj Chopra</p>
@@ -23,6 +23,10 @@ export default function AchievementCard() {
         <button className="bg-[var(--main-color)] text-white rounded-full px-4 py-2 w-full mt-4">
           View
         </button>
+      </div>
+      <div>
+
+
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -45,7 +45,6 @@ export default function ClippedDrawer() {
             {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton>
-                  
                   <ListItemText primary={text} />
                 </ListItemButton>
               </ListItem>
