@@ -40,12 +40,18 @@ function createData(
 }
 
 const rows = [
-createData('Vanshika Vemula', 'VU22CSEN0101128', '12/20', 80, true),
-createData('Vanshika Vemula', 'VU22CSEN0101128', '12/20', 80, true),
-createData('Vanshika Vemula', 'VU22CSEN0101128', '12/20', 80, true),
-createData('Vanshika Vemula', 'VU22CSEN0101128', '12/20', 80, true),
-createData('Vanshika Vemula', 'VU22CSEN0101128', '12/20', 80, true),
-createData('Vanshika Vemula', 'VU22CSEN0101128', '12/20', 80, true),
+  createData('John Doe', 'VU22CSEN0101001', '18/20', 90, true),
+  createData('Jane Smith', 'VU22CSEN0101002', '19/20', 95, true),
+  createData('Alice Johnson', 'VU22CSEN0101003', '17/20', 85, true),
+  createData('Bob Brown', 'VU22CSEN0101004', '16/20', 80, false),
+  createData('Charlie Davis', 'VU22CSEN0101005', '20/20', 100, true),
+  createData('Daisy Evans', 'VU22CSEN0101006', '15/20', 75, false),
+  createData('Evan Green', 'VU22CSEN0101007', '14/20', 70, false),
+  createData('Fiona Harris', 'VU22CSEN0101008', '13/20', 65, true),
+  createData('George Iverson', 'VU22CSEN0101009', '12/20', 60, false),
+  createData('Hannah James', 'VU22CSEN0101010', '19/20', 95, true),
+  createData('Isaac Kelly', 'VU22CSEN0101011', '11/20', 55, false),
+  createData('Julia Lee', 'VU22CSEN0101012', '10/20', 50, false),
 ];
 
 export default function CustomizedTables() {
@@ -58,12 +64,12 @@ export default function CustomizedTables() {
             <StyledTableCell align="left">Reg No</StyledTableCell>
             <StyledTableCell align="left">Attended</StyledTableCell>
             <StyledTableCell align="left">Percentage</StyledTableCell>
-            <StyledTableCell align="center">Present | Absent</StyledTableCell>
+            <StyledTableCell align="center">Mark Present</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <StyledTableRow key={row.name}>
+            <StyledTableRow key={row.regNo}>
               <StyledTableCell component="th" scope="row">
                 {row.name}
               </StyledTableCell>
@@ -71,8 +77,7 @@ export default function CustomizedTables() {
               <StyledTableCell align="left">{row.attended}</StyledTableCell>
               <StyledTableCell align="left">{row.percentage}</StyledTableCell>
               <StyledTableCell align="left" className="flex justify-center items-center">
-                <Checkbox  defaultChecked />
-                <Checkbox  />
+                <Checkbox checked={row.status} />
               </StyledTableCell>
             </StyledTableRow>
           ))}
