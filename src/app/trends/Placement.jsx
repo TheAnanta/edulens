@@ -30,7 +30,7 @@ const PlacementChart = () => {
       {
         label: "Placements",
         data: [65, 59, 80, 81, 56],
-        borderColor: "#d1e9ff",
+        borderColor: "#003c73",
         backgroundColor: "rgba(0, 0, 0, 0.2)",
         fill: true,
         tension: 0.3,
