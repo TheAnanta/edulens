@@ -17,46 +17,9 @@ export default function Page() {
             title="SoftwareEngineering"
             key="bi"
           />
-          <CourseCard
-            attribute="CSEN0001"
-            title="Software Engineering"
-            key="bi"
-          />
-          <CourseCard
-            attribute="CSEN0001"
-            title="Software Engineering"
-            key="bi"
-          />
-          <CourseCard
-            attribute="CSEN0001"
-            title="Software Engineering"
-            key="bi"
-          />
-          <CourseCard
-            attribute="CSEN0001"
-            title="Software Engineering"
-            key="bi"
-          />
-          <CourseCard
-            attribute="CSEN0001"
-            title="Software Engineering"
-            key="bi"
-          />
-          <CourseCard
-            attribute="CSEN0001"
-            title="Software Engineering"
-            key="bi"
-          />
-          <CourseCard
-            attribute="CSEN0001"
-            title="Software Engineering"
-            key="bi"
-          />
-          <CourseCard
-            attribute="CSEN0001"
-            title="Software Engineering"
-            key="bi"
-          />
+          <CourseCard attribute="CSEN1402" title="DBMS" key="dbms" />
+          <CourseCard attribute="CSEN1203" title="Algorithms" key="algo" />
+          <CourseCard attribute="CSEN1101" title="Operating-Systems" key="bi" />
           <CourseCard
             attribute="CSEN0001"
             title="Software Engineering"
