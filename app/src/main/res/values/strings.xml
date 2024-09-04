@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">EduLens</string>
+    <string name="theanantainitiave">the ananta initiative</string>
+    <string name="university_selection_subtitle">Select your university to dive right in,\nanother world awaits you!</string>
+    <string name="ic_hola">Hola</string>
+    <string name="institution">Institution</string>
+    <string name="welcome_to">Welcome to </string>
+    <string name="get_started">Get Started</string>
+    <string name="login_subtitle">login to start your journey through the exciting journey of learning, the eternal quest of life</string>
+    <string name="scan_id_card">or, scan ID card</string>
+    <string name="sign_up">Sign up</string>
+    <string name="login">Login</string>
+    <string name="here_s_an_overview_of_your_day">Here\'s an overview of your day</string>
+    <string name="assignment">Assignment\n</string>
+    <string name="database_management_system">Database Management System</string>
+    <string name="hours">hours</string>
+    <string name="about_gitam">About GITAM</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="about_gitam_text">"Ranked Andhra Pradesh's #1 private engineering institute, GITAM Visakhapatnam campus has been committed to enhancing student values through Gandhian philosophies for more than four decades. \n            "</string>
+    <string name="mission">Mission</string>
+    <string name="gitam_mission">Nurturing Valuable Futures!</string>
+    <string name="vision">Vision</string>
+    <string name="gitam_vission">Global leader in higher education</string>
+    <string name="post_card_report">A day well spent at the SIH hackathon working on the PS 1641 to help the university prepare an annual report. #hackathon @eclub_vizag</string>
+    <string name="manas_malla">Manas Malla</string>
+    <string name="results">Results</string>
+    <string name="resume">Resume</string>
+    <string name="query_community">Query Community</string>
+    <string name="raise_an_issue">Raise an issue</string>
+    <string name="quiz">Quiz</string>
+</resources>

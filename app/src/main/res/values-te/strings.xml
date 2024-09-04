@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ఎడ్యులెన్స్</string>
+    <string name="theanantainitiave">ద అనంత ఇనిషియేటివ్</string>
+    <string name="university_selection_subtitle">మీ విశ్వవిద్యాలయాన్ని ఎంచుకుని ముందుకు దూకండి, మరో ప్రపంచం మీ కోసం ఎదురుచూస్తోంది!</string>
+    <string name="ic_hola">నమస్తే</string>
+    <string name="institution">సంస్థ </string>
+    <string name="welcome_to">"కీ స్వాగతం "</string>
+    <string name="get_started">ప్రారంభించండి</string>
+    <string name="login_subtitle">లాగిన్ చేసి, జీవితపు శాశ్వత అన్వేషణ, రుచికరమైన విద్యా ప్రయాణాన్ని ప్రారంభించండి.</string>
+    <string name="scan_id_card">లేదా, ID కార్డ్ స్కాన్ చేయండి.</string>
+    <string name="sign_up">సైన్ అప్ చేయండి</string>
+    <string name="login">లాగిన్ చేయండి</string>
+    <string name="here_s_an_overview_of_your_day">ఇది మీ రోజు యొక్క సమగ్ర అవలోకనం</string>
+    <string name="assignment">అసైన్‌మెంట్\n</string>
+    <string name="database_management_system">డేటాబేస్ నిర్వహణ వ్యవస్థ</string>
+    <string name="hours">గంటలు</string>
+    <string name="about_gitam">GITAM గురించి </string>
+    <string name="dismiss">వదలండి</string>
+    <string name="about_gitam_text">"ఆంధ్ర ప్రదేశ్ లో #1 ప్రైవేట్ ఇంజనీరింగ్ ఇన్‌స్టిట్యూట్ గా ర్యాంక్ చేసిన GITAM విశాఖపట్నం క్యాంపస్, నాలుగు దశాబ్దాలుగా గాంధీ సిద్ధాంతాల ద్వారా విద్యార్థుల విలువలను మెరుగు పరిచేందుకు కట్టుబడింది.. \n            "</string>
+    <string name="mission">మిషన్</string>
+    <string name="gitam_mission">మూల్యవంతమైన భవిష్యత్తులను పెంపొందించడం!</string>
+    <string name="vision">దృష్టి </string>
+    <string name="gitam_vission">ఉన్నత విద్యలో ప్రపంచవ్యాప్తంగా నాయకుడు</string>
+    <string name="post_card_report">"SIH హ్యాకథాన్‌లో ఒక రోజు చాలా బాగా గడిపాము, PS 1641 పై పని చేసి యూనివర్శిటీ వార్షిక నివేదిక తయారీలో సహాయం అందించడం ఆనందంగా ఉంది. #hackathon @eclub_vizag"</string>
+    <string name="manas_malla">మనస్ మల్లా</string>
+    <string name="results">ఫలితాలు</string>
+    <string name="resume">సారాంశం</string>
+    <string name="query_community">ప్రశ్నా సమాజం</string>
+    <string name="raise_an_issue">సమస్యను ఎగురవేయండి</string>
+    <string name="quiz">పరీక్ష"</string>
+
+</resources>

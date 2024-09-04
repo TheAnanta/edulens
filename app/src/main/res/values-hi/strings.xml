@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">एडुलेंस</string>
+    <string name="theanantainitiave">दि अनंता पहल</string>
+    <string name="university_selection_subtitle">अपनी विश्वविद्यालय का चयन करें और तुरंत आगे बढ़ें, \nएक और दुनिया आपका इंतजार कर रही है!</string>
+    <string name="ic_hola">नमस्ते</string>
+    <string name="institution">संस्थान</string>
+    <string name="welcome_to">आपका स्वागत ह </string>
+    <string name="get_started">शुरू कर</string>
+    <string name="login_subtitle">लॉगिन करें और सीखने की रोमांचक यात्रा की शुरुआत करें, जीवन की अनंत खोज</string>
+    <string name="scan_id_card">या, आईडी कार्ड स्कैन कर</string>
+    <string name="sign_up">साइन अप करें</string>
+    <string name="login">लॉगिन</string>
+    <string name="here_s_an_overview_of_your_day">यहां आपके दिन का एक अवलोकन ह</string>
+    <string name="assignment">असाइनमेंट\n</string>
+    <string name="database_management_system">डेटाबेस प्रबंधन प्रणाल</string>
+    <string name="hours">घंटे</string>
+    <string name="about_gitam">GITAM के बारे में</string>
+    <string name="dismiss">खारिज कर</string>
+    <string name="about_gitam_text">"आंध्र प्रदेश के #1 निजी इंजीनियरिंग संस्थान के रूप में रैंक किया गया, GITAM विशाखापत्तनम परिसर पिछले चार दशकों से गांधीवादी दर्शन के माध्यम से छात्रों के मूल्यों को बढ़ाने के लिए प्रतिबद्ध है। "</string>
+    <string name="mission">मिशन</string>
+    <string name="gitam_mission">मूल्यवान भविष्य का पोषण!</string>
+    <string name="vision">विजन</string>
+    <string name="gitam_vission">उच्च शिक्षा में वैश्विक नेता</string>
+    <string name="post_card_report">SIH हैकाथॉन में PS 1641 पर काम करते हुए एक दिन अच्छा बीता, विश्वविद्यालय को वार्षिक रिपोर्ट तैयार करने में मदद की। #hackathon @eclub_vizag</string>
+    <string name="manas_malla">मानस मल्ला</string>
+    <string name="results">परिणाम</string>
+    <string name="resume">रिज़्यूम</string>
+    <string name="query_community">प्रश्न समुदाय</string>
+    <string name="raise_an_issue">एक समस्या उठाएं</string>
+    <string name="quiz">क्विज़</string>
+</resources>
