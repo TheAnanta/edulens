@@ -14,7 +14,7 @@ export default function Page() {
         <div className="grid grid-cols-3 mt-10 gap-8 w-full">
           <CourseCard
             attribute="CSEN0001"
-            title="Software Engineering"
+            title="SoftwareEngineering"
             key="bi"
           />
           <CourseCard
