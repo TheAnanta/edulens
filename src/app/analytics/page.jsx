@@ -1,13 +1,15 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
 import Sidebar from "@/components/Sidebar";
 import Button from "@mui/material/Button";
+import { downloadPDF } from "@/helper/pdfConvert";
 
 const UniversityAnalysis = () => {
   const [data, setData] = useState(null);
   const [showAnalysis, setShowAnalysis] = useState(false); // New state to control when to show the analysis
+  const pdfRef = useRef();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -64,90 +66,116 @@ const UniversityAnalysis = () => {
   return (
     <div>
       <Sidebar />
-      <div className="pt-24 pl-64">
-        {!showAnalysis && (
-          <div className="flex flex-col items-center justify-center h-[60vh]">
-            <h1 className="mb-4 text-xl font-semibold">A Comprehensive Analysis of University</h1>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={handleGenerateClick}
-              className="my-12 text-center"
-            >
-              Generate
-            </Button>
-          </div>
-        )}
-
-        {showAnalysis && (
-          <>
-            <h1 className="text-2xl font-bold my-12 w-full text-center">
-              University Analysis
-            </h1>
-
-            <div className="chart-container px-48">
-              <Bar data={chartData} options={chartOptions} />
+      <div className="flex flex-col justify-center items-center">
+        <div ref={pdfRef} className="pt-24 pl-64">
+          {!showAnalysis && (
+            <div className="flex flex-col items-center justify-center h-[60vh]">
+              <h1 className="mb-4 text-xl font-semibold">
+                A Comprehensive Analysis of University
+              </h1>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleGenerateClick}
+                className="my-12 text-center"
+              >
+                Generate
+              </Button>
             </div>
+          )}
 
-            <h1 className="text-2xl font-bold my-12 w-full text-center">
-              Tabulated Data
-            </h1>
+          {showAnalysis && (
+            <>
+              <h1 className="text-2xl font-bold my-12 w-full text-center">
+                University Analysis
+              </h1>
 
-            <table className="w-full text-left border-collapse my-8">
-              <thead>
-                <tr>
-                  <th className="border border-gray-300 px-4 py-2 bg-gray-100">
-                    Category
-                  </th>
-                  <th className="border border-gray-300 px-4 py-2 bg-gray-100">
-                    Score
-                  </th>
-                  <th className="border border-gray-300 px-4 py-2 bg-gray-100">
-                    Strengths
-                  </th>
-                  <th className="border border-gray-300 px-4 py-2 bg-gray-100">
-                    Weaknesses
-                  </th>
-                  <th className="border border-gray-300 px-4 py-2 bg-gray-100">
-                    Recommendations
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {Object.keys(data).map((key) => (
-                  <tr key={key} className="odd:bg-white even:bg-gray-50">
-                    <td className="border border-gray-300 px-4 py-2">{key}</td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      {data[key]?.score}
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      <ul className="list-disc pl-5">
-                        {data[key]?.strengths?.map((strength, index) => (
-                          <li key={index}>{strength}</li>
-                        )) || <li>No strengths listed</li>}
-                      </ul>
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      <ul className="list-disc pl-5">
-                        {data[key]?.weaknesses?.map((weakness, index) => (
-                          <li key={index}>{weakness}</li>
-                        )) || <li>No weaknesses listed</li>}
-                      </ul>
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      <ul className="list-disc pl-5">
-                        {data[key]?.recommendations?.map(
-                          (recommendation, index) => (
-                            <li key={index}>{recommendation}</li>
-                          )
-                        ) || <li>No recommendations listed</li>}
-                      </ul>
-                    </td>
+              <div className="chart-container px-48">
+                <Bar data={chartData} options={chartOptions} />
+              </div>
+
+              <h1 className="text-2xl font-bold my-12 w-full text-center">
+                Tabulated Data
+              </h1>
+
+              <table className="w-full text-left border-collapse my-8">
+                <thead>
+                  <tr>
+                    <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                      Category
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                      Score
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                      Strengths
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                      Weaknesses
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                      Recommendations
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </>
+                </thead>
+                <tbody>
+                  {Object.keys(data).map((key) => (
+                    <tr key={key} className="odd:bg-white even:bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-2">
+                        {key}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {data[key]?.score}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        <ul className="list-disc pl-5">
+                          {data[key]?.strengths?.map((strength, index) => (
+                            <li key={index}>{strength}</li>
+                          )) || <li>No strengths listed</li>}
+                        </ul>
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        <ul className="list-disc pl-5">
+                          {data[key]?.weaknesses?.map((weakness, index) => (
+                            <li key={index}>{weakness}</li>
+                          )) || <li>No weaknesses listed</li>}
+                        </ul>
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        <ul className="list-disc pl-5">
+                          {data[key]?.recommendations?.map(
+                            (recommendation, index) => (
+                              <li key={index}>{recommendation}</li>
+                            )
+                          ) || <li>No recommendations listed</li>}
+                        </ul>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </>
+          )}
+        </div>
+        {showAnalysis && (
+          <Button
+            onClick={() => {
+              // Remove the padding
+              pdfRef.current.classList.remove("pl-64");
+              pdfRef.current.classList.add("px-10");
+
+              downloadPDF(pdfRef);
+
+              // Re-add the padding
+              setTimeout(() => {
+                pdfRef.current.classList.add("pl-64");
+              }, 100);
+            }}
+            variant="contained"
+            className="w-fit mx-auto"
+          >
+            Download
+          </Button>
         )}
       </div>
     </div>
