@@ -1,4 +1,5 @@
 "use client";
+
 import LinearProgress from "@mui/material";
 import Sidebar from "@/components/Sidebar";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -6,9 +7,43 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Card from "@/components/Card";
 import Cookies from "js-cookie";
+import { useState, useEffect } from "react";
 
 export default function Page() {
   const router = useRouter();
+  const [data, setData] = useState( {
+    "FacultyID": "F001",
+    "FullName": "admin singh",
+    "Email": "admin@nitam.edu",
+    "Phone-Number": "123-456-7890",
+    "Aadhar-Number": "123456789012",
+    "gender": "Male",
+    "Mother-Name": "Jane Doe",
+    "DOB": "1980-01-01",
+    "Nationality": "American",
+    "DepartmentID": "DEPT01",
+    "Role": "Professor",
+    "Office-Number": "101",
+    "LevelOfEducation": "PhD",
+    "DateOfJoining": "2020-01-01",
+    "PresentYear": 2023,
+    "Semester": "Spring"
+  });
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await fetch(
+  //       "https://raw.githubusercontent.com/Chandan-6/avadaranuvu/main/FacultyData.json"
+  //     );
+  //     const result = await response.json();
+  //     const filteredData = result.faculty.filter(
+  //       (item) => item.FullName === "admin singn"
+  //     );
+
+  //     setData(filteredData[0]);
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <div className="flex relative">
@@ -24,36 +59,15 @@ export default function Page() {
           <AccountCircleIcon />
         </div>
         <div className="grid grid-cols-3 mt-24 gap-8 w-full mb-6">
-          <Card
-            pro={45}
-            attribute="Your recent activity summary"
-            title="Activity"
-          />
-          <Card
-            pro={45}
-            attribute="Total projects you're working on"
-            title="Projects"
-          />
-          <Card
-            pro={45}
-            attribute="Number of messages in your inbox"
-            title="Messages"
-          />
-          <Card
-            pro={45}
-            attribute="Upcoming deadlines and tasks"
-            title="Tasks"
-          />
-          <Card
-            pro={45}
-            attribute="Your profile completion status"
-            title="Profile"
-          />
-          <Card
-            pro={45}
-            attribute="Number of colleagues online"
-            title="Connections"
-          />
+          {data &&
+            Object.entries(data).map(([key, value], index) => (
+              <Card
+              key={index}
+                attribute={value}
+                title={key}
+              />
+            ))}
+
         </div>
       </div>
     </div>
