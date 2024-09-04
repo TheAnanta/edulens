@@ -3,16 +3,18 @@ import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
+  const name = request.cookies.get("name")?.value || "";
 
-  const isPublicPath = path === "/";
+  // Define public paths (accessible without login)
+  const isPublicPath = path === "/" || path === "/login";
 
-  const token = request.cookies.get("token")?.value || "";
-
-  if (isPublicPath && !token) {
-    return NextResponse.redirect(new URL("/", request.nextUrl));
+  if (isPublicPath && name) {
+    // Redirect logged-in users from public paths to profile
+    return NextResponse.redirect(new URL("/profile", request.nextUrl));
+  } else if (!isPublicPath && name === "") {
+    // Redirect non-logged-in users to login from protected paths
+    return NextResponse.redirect(new URL("/login", request.nextUrl));
   }
-
-  return NextResponse.next();
 }
 
 export const config = {
@@ -32,5 +34,6 @@ export const config = {
     "/salary",
     "/trends",
     "/timetable",
+    "/login",
   ],
 };

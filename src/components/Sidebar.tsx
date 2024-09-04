@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import AnalyticsIcon from '@mui/icons-material/Analytics';
+import AnalyticsIcon from "@mui/icons-material/Analytics";
 import AppBar from "@mui/material/AppBar";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
@@ -18,7 +18,7 @@ import InputBase from "@mui/material/InputBase";
 import { styled, alpha } from "@mui/material/styles";
 import { Feedback } from "@mui/icons-material";
 import { BuildCircle } from "@mui/icons-material";
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 import Button from "@mui/material/Button";
 import { useRouter } from "next/navigation";
 
@@ -63,7 +63,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const menuItems = [
-
   { text: "Profile", icon: "person", link: "/profile" },
   { text: "Attendance", icon: "check_circle", link: "/attendance" },
   { text: "Events", icon: "event", link: "/events" },
@@ -83,10 +82,12 @@ const menuItems = [
   { text: "Infrastructure", icon: "build_circle", link: "/infrastructure" },
 ];
 
-const adminMenuItems = [{ text: "Analytics", icon: "analytics", link: "/analytics" }, ...menuItems];
+const adminMenuItems = [
+  { text: "Analytics", icon: "analytics", link: "/analytics" },
+  ...menuItems,
+];
 
 export default function ClippedDrawer() {
-
   const router = useRouter();
   const pathname = usePathname();
 
@@ -102,10 +103,17 @@ export default function ClippedDrawer() {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             {"EduLens"}
           </Typography>
-          <Button onClick={() => {
-            Cookies.remove("name");
-            router.push("/");
-          }} variant="contained">SignOut</Button>
+          <Button
+            onClick={() => {
+              Cookies.remove("token");
+              Cookies.remove("isAdmin");
+              Cookies.remove("name");
+              router.push("/");
+            }}
+            variant="contained"
+          >
+            SignOut
+          </Button>
           {/* Search Bar */}
           <Search>
             <SearchIconWrapper>
@@ -142,8 +150,20 @@ export default function ClippedDrawer() {
         <Toolbar />
         <Box sx={{ overflow: "auto" }}>
           <List>
-            {(Cookies.get('isAdmin') === 'true' ? adminMenuItems : menuItems).map((item) => (
-              <ListItem key={item.text} disablePadding sx={pathname ===  item.link ? { backgroundColor: '#448ccf', color: "#ffffff" } : null} className="bg-[var-(--secondary-color)]">
+            {(Cookies.get("isAdmin") === "true"
+              ? adminMenuItems
+              : menuItems
+            ).map((item) => (
+              <ListItem
+                key={item.text}
+                disablePadding
+                sx={
+                  pathname === item.link
+                    ? { backgroundColor: "#448ccf", color: "#ffffff" }
+                    : null
+                }
+                className="bg-[var-(--secondary-color)]"
+              >
                 <ListItemButton component="a" href={item.link}>
                   <ListItemIcon>
                     <span className="material-symbols-outlined">

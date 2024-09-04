@@ -1,29 +1,4 @@
-"use client";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import Cookies from "js-cookie";
-
 export default function Page() {
-  const [username, setUsername] = useState<String>("");
-  const router = useRouter();
-  function handleInput(e: any) {
-    setUsername(e.target.value);
-  }
-
-  function handleSignUp() {
-    if (username.length > 0) {
-      const user = username.split("@")[0];
-      if (username === "admin@nitam.edu") {
-        // Set cookies with appropriate options
-        Cookies.set("name", "admin singh", { expires: 7 }); // Expires in 7 days
-        Cookies.set("isAdmin", "true", { expires: 7 });
-      } else {
-        Cookies.set("name", "profx", { expires: 7 });
-      }
-      router.push(`/profile`);
-    }
-  }
-
   return (
     <div className="flex relative justify-between">
       <div className="pt-24 px-16 w-[40%] h-screen flex flex-col items-start justify-start">
@@ -34,27 +9,12 @@ export default function Page() {
           nulla exercitationem vero commodi, deserunt quo molestiae aliquam
           eligendi explicabo veritatis.
         </p>
-        <div className="flex flex-col space-y-2 w-full">
-          <input
-            onChange={handleInput}
-            type="text"
-            title="username"
-            placeholder="@username"
-            className="py-4 px-8 rounded-full border border-neutral-400 mr-4 w-full"
-          />
-          <input
-            type="password"
-            title="password"
-            placeholder="password"
-            className="py-4 px-8 rounded-full border border-neutral-400 w-full"
-          />
-        </div>
-        <button
-          onClick={handleSignUp}
-          className="mt-6 text-lg rounded-full py-3 px-6 font-bold border border-neutral-400 w-full"
+        <a
+          href="/login"
+          className="mt-6 text-center text-lg rounded-full py-3 px-6 font-bold border border-neutral-400 w-full"
         >
-          SignUp
-        </button>
+          Login
+        </a>
       </div>
       <img
         src="/study.svg"
