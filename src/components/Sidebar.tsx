@@ -1,4 +1,5 @@
 "use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -18,6 +19,7 @@ import { styled, alpha } from "@mui/material/styles";
 import { Feedback } from "@mui/icons-material";
 import { usePathname } from 'next/navigation'
 import Button from "@mui/material/Button";
+import { useRouter } from "next/navigation";
 
 const drawerWidth = 240;
 
@@ -61,8 +63,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const menuItems = [
 
-  { text: "Profile", icon: "person", link: "/profile/manas" },
-  { text: "Attendance", icon: "check_circle", link: "/attendance/manas" },
+  { text: "Profile", icon: "person", link: "/profile" },
+  { text: "Attendance", icon: "check_circle", link: "/attendance" },
   { text: "Events", icon: "event", link: "/events" },
   { text: "Course Structure", icon: "school", link: "/courses" },
   { text: "Timetable", icon: "schedule", link: "/timetable" },
@@ -74,15 +76,25 @@ const menuItems = [
   { text: "Achievements", icon: "emoji_events", link: "/achievements" },
   { text: "Placements", icon: "work", link: "/placements" },
   { text: "Resource Center", icon: "menu_book", link: "/resource-center" },
-  { text: "Salary Portal", icon: "attach_money", link: "/salary/manas" },
+  { text: "Salary Portal", icon: "attach_money", link: "/salary" },
   { text: "Feedback | Query", icon: "feedback", link: "/feedback" },
-  { text: "Analytics", icon: "analytics", link: "/analytics" },
   { text: "Trends", icon: "trending_up", link: "/trends" },
 ];
 
+const adminMenuItems = [{ text: "Analytics", icon: "analytics", link: "/analytics" }, ...menuItems];
+
 export default function ClippedDrawer() {
 
-  const pathname = usePathname()
+  const router = useRouter();
+  const pathname = usePathname();
+  
+  React.useEffect(() => {
+    if(localStorage === undefined || localStorage == null || localStorage.getItem('name') === null){
+      router.push("/");
+    }
+  },[localStorage, localStorage.getItem('name')]);
+
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -95,7 +107,10 @@ export default function ClippedDrawer() {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             {"EduLens"}
           </Typography>
-          <Button variant="contained">SignOut</Button>
+          <Button onClick={() => {
+            localStorage.clear();
+            router.push("/");
+          }} variant="contained">SignOut</Button>
           {/* Search Bar */}
           <Search>
             <SearchIconWrapper>
@@ -132,7 +147,7 @@ export default function ClippedDrawer() {
         <Toolbar />
         <Box sx={{ overflow: "auto" }}>
           <List>
-            {menuItems.map((item) => (
+            {(localStorage.getItem('isAdmin') === 'true' ? adminMenuItems : menuItems).map((item) => (
               <ListItem key={item.text} disablePadding sx={pathname ===  item.link ? { backgroundColor: '#448ccf', borderRadius: '32px' } : null} className="bg-[var-(--secondary-color)]">
                 <ListItemButton component="a" href={item.link}>
                   <ListItemIcon>

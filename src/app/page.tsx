@@ -12,7 +12,14 @@ export default function Page() {
   function handleSignUp() {
     if (username.length > 0) {
       const user = username.split("@")[0];
-      router.push(`/profile/${user}`);
+      if(username === 'admin@nitam.edu'){
+        localStorage.setItem('name', "admin singh");
+        localStorage.setItem('isAdmin', "true");
+      }
+      else{
+        localStorage.setItem('name', "profx");
+      }
+      router.push(`/profile`);
     }
   }
 

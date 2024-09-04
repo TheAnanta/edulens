@@ -1,7 +1,7 @@
 import Sidebar from '@/components/Sidebar';
 import React from 'react';
 
-function App(props: { params: { id: string } }) {
+function App() {
     const scheduleData = [
         { year: 2024, month: 'August', grossAmount: 46000, deductionAmount: 8000, netAmount: 38000 },
         { year: 2024, month: 'August', grossAmount: 46000, deductionAmount: 8000, netAmount: 38000 },

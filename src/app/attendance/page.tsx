@@ -7,7 +7,7 @@ import MarkTable from "./MarkTable";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
-export default function Page(props: { params: { id: string } }) {
+export default function Page() {
   const [attendanceTopDetails, setAttendanceTopDetails] = useState([
     { Subject: "DBMS" },
     { CourseID: "007James" },
