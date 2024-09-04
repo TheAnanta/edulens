@@ -17,6 +17,7 @@ import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import { styled, alpha } from "@mui/material/styles";
 import { Feedback } from "@mui/icons-material";
+import { BuildCircle } from "@mui/icons-material";
 import { usePathname } from 'next/navigation'
 import Button from "@mui/material/Button";
 import { useRouter } from "next/navigation";
@@ -79,6 +80,7 @@ const menuItems = [
   { text: "Salary Portal", icon: "attach_money", link: "/salary" },
   { text: "Feedback | Query", icon: "feedback", link: "/feedback" },
   { text: "Trends", icon: "trending_up", link: "/trends" },
+  { text: "Infrastructure", icon: "build_circle", link: "/infrastructure" },
 ];
 
 const adminMenuItems = [{ text: "Analytics", icon: "analytics", link: "/analytics" }, ...menuItems];
