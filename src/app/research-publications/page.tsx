@@ -5,53 +5,53 @@ import Footer from "@/components/Footer";
 
 const ResearchData = [
   {
-    attribute: "Jhon Wick",
-    title: "speech recognition",
+    attribute: "Dr. Emily Carter",
+    title: "Quantum Computing for AI",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsu",
+      "An exploration of how quantum computing can revolutionize artificial intelligence, with a focus on complex problem-solving.",
     rating: 5,
   },
   {
-    attribute: "Jhon Wick",
-    title: "speech recognition",
+    attribute: "Prof. John Doe",
+    title: "Advancements in Renewable Energy",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsu",
-    rating: 1,
+      "A comprehensive review of the latest technologies in renewable energy, including solar, wind, and bioenergy.",
+    rating: 4,
   },
   {
-    attribute: "Jhon Wick",
-    title: "speech recognition",
+    attribute: "Dr. Alice Smith",
+    title: "Genomics and Personalized Medicine",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsu",
-    rating: 0,
+      "How genomic research is leading to personalized treatments in medicine, offering targeted therapies for various diseases.",
+    rating: 5,
   },
   {
-    attribute: "Jhon Wick",
-    title: "speech recognition",
+    attribute: "Prof. Mark Wilson",
+    title: "Cybersecurity Threats in the IoT Era",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsu",
-    rating: 2,
-  },
-  {
-    attribute: "Jhon Wick",
-    title: "speech recognition",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsu",
+      "Analyzing the increasing cybersecurity risks associated with the proliferation of Internet of Things (IoT) devices.",
     rating: 3,
   },
   {
-    attribute: "Jhon Wick",
-    title: "speech recognition",
+    attribute: "Dr. Olivia Johnson",
+    title: "AI Ethics and Society",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsu",
-    rating: 1,
+      "An in-depth discussion on the ethical considerations of artificial intelligence in modern society.",
+    rating: 4,
   },
   {
-    attribute: "Jhon Wick",
-    title: "speech recognition",
+    attribute: "Prof. Michael Brown",
+    title: "Climate Change: A Global Perspective",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsu",
-    rating: 3,
+      "Examining the long-term effects of climate change on global ecosystems and human populations.",
+    rating: 4,
+  },
+  {
+    attribute: "Dr. Sophia Davis",
+    title: "Nanotechnology in Cancer Treatment",
+    description:
+      "Exploring the potential of nanotechnology in developing innovative treatments for cancer.",
+    rating: 5,
   },
 ];
 
