@@ -14,3 +14,4 @@ export default function Card(props: { title: string; attribute: { [key: string]:
     </div>
   );
 }
+

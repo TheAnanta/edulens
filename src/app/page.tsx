@@ -12,12 +12,11 @@ export default function Page() {
   function handleSignUp() {
     if (username.length > 0) {
       const user = username.split("@")[0];
-      if(username === 'admin@nitam.edu'){
-        localStorage.setItem('name', "admin singh");
-        localStorage.setItem('isAdmin', "true");
-      }
-      else{
-        localStorage.setItem('name', "profx");
+      if (username === "admin@nitam.edu") {
+        localStorage.setItem("name", "admin singh");
+        localStorage.setItem("isAdmin", "true");
+      } else {
+        localStorage.setItem("name", "profx");
       }
       router.push(`/profile`);
     }
@@ -65,8 +64,8 @@ export default function Page() {
       </div>
 
       <div className="bg-[var(--main-color)]  w-[40%] right-[60%]">
-        <div className="rotate-90 absolute text-white text-xl gap-x-6">
-          <img src="/text.svg" alt="" className="h-full" />
+        <div className="rotate-90 absolute text-white text-xl ">
+          <img src="/text.svg" alt="" className="h-max" />
           <img src="/text.svg" alt="" className="h-full" />
           <img src="/text.svg" alt="" className="h-full" />
         </div>
