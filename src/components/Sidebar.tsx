@@ -16,6 +16,7 @@ import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import { styled, alpha } from "@mui/material/styles";
 import { Feedback } from "@mui/icons-material";
+import { usePathname } from 'next/navigation'
 
 const drawerWidth = 240;
 
@@ -69,7 +70,7 @@ const menuItems = [
     text: "Research & Publication",
     icon: "library_books",
   },
-  { text: "Achievements", icon: "emoji_events", link: "/achievements/manas" },
+  { text: "Achievements", icon: "emoji_events", link: "/achievements" },
   { text: "Placements", icon: "work", link: "/placements" },
   { text: "Resource Center", icon: "menu_book", link: "/resource-center" },
   { text: "Salary Portal", icon: "attach_money", link: "/salary/manas" },
@@ -79,6 +80,8 @@ const menuItems = [
 ];
 
 export default function ClippedDrawer() {
+
+  const pathname = usePathname()
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -129,7 +132,7 @@ export default function ClippedDrawer() {
         <Box sx={{ overflow: "auto" }}>
           <List>
             {menuItems.map((item) => (
-              <ListItem key={item.text} disablePadding>
+              <ListItem key={item.text} disablePadding sx={pathname ===  item.link ? { backgroundColor: '#448ccf', borderRadius: '32px' } : null} className="bg-[var-(--secondary-color)]">
                 <ListItemButton component="a" href={item.link}>
                   <ListItemIcon>
                     <span className="material-symbols-outlined">
