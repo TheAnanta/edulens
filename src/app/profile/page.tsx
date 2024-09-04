@@ -8,14 +8,31 @@ import React from "react";
 import { useRouter } from "next/navigation";
 
 export default function Page() {
+  const [data, setData] = React.useState([]);
   const router = useRouter();
 
   React.useEffect(() => {
     console.log("locahasldfj");
-    if(localStorage === undefined || localStorage.getItem('name') === undefined){
+    if (localStorage === undefined || localStorage.getItem('name') === undefined) {
       router.push("/");
     }
-  },[localStorage, localStorage.getItem('name')]);
+
+    const fetchData = async () => {
+      const response = await fetch(
+        "https://raw.githubusercontent.com/Chandan-6/avadaranuvu/main/FacultyData"
+      );
+      const result = await response.json();
+
+      const filteredData = result.faculty.filter(
+        (item: { fullName: string | null; }) => item.fullName === localStorage.getItem('name')
+      );
+
+      setData(filteredData[0]);
+    };
+    fetchData();
+  }, [localStorage, localStorage.getItem('name')]);
+
+
   return (
     <div className="flex relative">
       <Sidebar />
@@ -30,14 +47,9 @@ export default function Page() {
           <AvatarImage />
         </div>
         <div className="grid grid-cols-3 mt-24 gap-8 w-full mb-6">
-          <Card attribute="Name" title="A" key="bi" />
-          <Card attribute="hi there" title="B" key="bi" />
-          <Card attribute="hi there" title="C" key="bi" />
-          <Card attribute="Name" title="A" key="bi" />
-          <Card attribute="hi there" title="B" key="bi" />
-          <Card attribute="hi there" title="C" key="bi" />
-          <Card attribute="Name" title="A" key="bi" />
-          <Card attribute="hi there" title="B" key="bi" />
+          {data.map((item, index) => (
+            <Card attribute={Object.keys(item)[0]} title="F" key={index} />
+          ))}
         </div>
       </div>
     </div>
