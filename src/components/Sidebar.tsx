@@ -147,9 +147,8 @@ export default function ClippedDrawer() {
         <Toolbar />
         <Box sx={{ overflow: "auto" }}>
           <List>
-            {/* {(localStorage.getItem('isAdmin') === 'true' ? adminMenuItems : menuItems).map((item) => ( */}
-            {adminMenuItems.map((item) => (
-              <ListItem key={item.text} disablePadding sx={pathname ===  item.link ? { backgroundColor: '#448ccf', borderRadius: '32px' } : null} className="bg-[var-(--secondary-color)]">
+            {(localStorage.getItem('isAdmin') === 'true' ? adminMenuItems : menuItems).map((item) => (
+              <ListItem key={item.text} disablePadding sx={pathname ===  item.link ? { backgroundColor: '#448ccf', color: "#ffffff" } : null} className="bg-[var-(--secondary-color)]">
                 <ListItemButton component="a" href={item.link}>
                   <ListItemIcon>
                     <span className="material-symbols-outlined">
