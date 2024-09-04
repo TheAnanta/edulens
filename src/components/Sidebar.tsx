@@ -17,6 +17,7 @@ import InputBase from "@mui/material/InputBase";
 import { styled, alpha } from "@mui/material/styles";
 import { Feedback } from "@mui/icons-material";
 import { usePathname } from 'next/navigation'
+import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
 
@@ -94,7 +95,7 @@ export default function ClippedDrawer() {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             {"EduLens"}
           </Typography>
-
+          <Button variant="contained">SignOut</Button>
           {/* Search Bar */}
           <Search>
             <SearchIconWrapper>
