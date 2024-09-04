@@ -14,7 +14,7 @@ export default function PublicationCard(props: { title: string; attribute: strin
     ratingStars.reverse();
 
     return (
-        <div className="bg-[var(--secondary-color)] p-6 w-full rounded-3xl flex-col items-center justify-between space-y-8">
+        <div className="bg-[var(--secondary-color)] p-6 w-ful   l rounded-3xl flex-col items-center justify-between space-y-8">
             <div className="flex justify-between items-center">
 
                 <div>
