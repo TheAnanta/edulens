@@ -1,5 +1,5 @@
 "use client";
-
+import Cookies from "js-cookie";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -89,13 +89,6 @@ export default function ClippedDrawer() {
 
   const router = useRouter();
   const pathname = usePathname();
-  
-  React.useEffect(() => {
-    if(localStorage === undefined || localStorage == null || localStorage.getItem('name') === null){
-      router.push("/");
-    }
-  },[localStorage, localStorage.getItem('name')]);
-
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -110,7 +103,7 @@ export default function ClippedDrawer() {
             {"EduLens"}
           </Typography>
           <Button onClick={() => {
-            localStorage.clear();
+            Cookies.remove("name");
             router.push("/");
           }} variant="contained">SignOut</Button>
           {/* Search Bar */}
@@ -149,7 +142,7 @@ export default function ClippedDrawer() {
         <Toolbar />
         <Box sx={{ overflow: "auto" }}>
           <List>
-            {(localStorage.getItem('isAdmin') === 'true' ? adminMenuItems : menuItems).map((item) => (
+            {(Cookies.get('isAdmin') === 'true' ? adminMenuItems : menuItems).map((item) => (
               <ListItem key={item.text} disablePadding sx={pathname ===  item.link ? { backgroundColor: '#448ccf', color: "#ffffff" } : null} className="bg-[var-(--secondary-color)]">
                 <ListItemButton component="a" href={item.link}>
                   <ListItemIcon>

@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Cookies from "js-cookie";
 
 export default function Page() {
   const [username, setUsername] = useState<String>("");
@@ -13,10 +14,11 @@ export default function Page() {
     if (username.length > 0) {
       const user = username.split("@")[0];
       if (username === "admin@nitam.edu") {
-        localStorage.setItem("name", "admin singh");
-        localStorage.setItem("isAdmin", "true");
+        // Set cookies with appropriate options
+        Cookies.set("name", "admin singh", { expires: 7 }); // Expires in 7 days
+        Cookies.set("isAdmin", "true", { expires: 7 });
       } else {
-        localStorage.setItem("name", "profx");
+        Cookies.set("name", "profx", { expires: 7 });
       }
       router.push(`/profile`);
     }

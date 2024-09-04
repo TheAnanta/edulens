@@ -5,18 +5,10 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import React from "react";
 import { useRouter } from "next/navigation";
 import Card from "@/components/Card";
+import Cookies from "js-cookie";
 
 export default function Page() {
   const router = useRouter();
-
-  React.useEffect(() => {
-    if (
-      localStorage === undefined ||
-      localStorage.getItem("name") === undefined
-    ) {
-      router.push("/");
-    }
-  }, [localStorage, localStorage.getItem("name")]);
 
   return (
     <div className="flex relative">
@@ -26,7 +18,7 @@ export default function Page() {
           <div className="text-2xl font-normal">
             Welcome Back!{" "}
             <span className="font-semibold text-3xl uppercase">
-              {localStorage.getItem("name")}
+              {Cookies.get("name")}
             </span>
           </div>
           <AccountCircleIcon />
